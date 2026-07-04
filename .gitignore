@@ -1,3 +1,14 @@
+# Build artifacts
 target/
-cathedral-os/
-wormgraph_storage.json
+node_modules/
+dist/
+build/
+__pycache__/
+*.pyc
+
+# TLA+ artifacts
+arkhe-tla-2.9.8/states/
+arkhe-tla-2.9.8/*.bin
+arkhe-tla-2.9.8/*.tla.bak
+arkhe-tla-2.9.8/*_TTrace_*.tla
+arkhe-tla-2.9.8/out*.txt

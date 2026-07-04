@@ -1,0 +1,99 @@
+TLC2 Version 2026.07.03.181814 (rev: 042d526)
+Warning: Please run the Java VM, which executes TLC with a throughput optimized garbage collector, by passing the "-XX:+UseParallelGC" property.
+(Use the -nowarning option to disable this warning.)
+Running breadth-first search Model-Checking with fp 51 and seed 2342946959757827960 with 1 worker on 4 cores with 1990MB heap and 64MB offheap memory [pid: 142478] (Linux 6.8.0 amd64, Ubuntu 21.0.10 64bit, MSBDiskFPSet, DiskStateQueue).
+Parsing file /app/arkhe-tla-2.9.8/ARKHE_Main_wrapper.tla
+Parsing file /app/arkhe-tla-2.9.8/ARKHE_Main.tla
+Parsing file /tmp/tlc-4966366586422094768/_TLCTrace.tla (jar:file:/app/arkhe-tla-2.9.8/tla2tools.jar!/tla2sany/StandardModules/_TLCTrace.tla)
+Parsing file /app/arkhe-tla-2.9.8/ARKHE_Proofs.tla
+Parsing file /app/arkhe-tla-2.9.8/ARKHE_Transition.tla
+Parsing file /app/arkhe-tla-2.9.8/ARKHE_Replay.tla
+Parsing file /app/arkhe-tla-2.9.8/ARKHE_AASM.tla
+Parsing file /app/arkhe-tla-2.9.8/ARKHE_Composition.tla
+Parsing file /app/arkhe-tla-2.9.8/ARKHE_State.tla
+Parsing file /app/arkhe-tla-2.9.8/ARKHE_Projection.tla
+Parsing file /app/arkhe-tla-2.9.8/ARKHE_Types.tla
+Parsing file /tmp/tlc-4966366586422094768/Integers.tla (jar:file:/app/arkhe-tla-2.9.8/tla2tools.jar!/tla2sany/StandardModules/Integers.tla)
+Parsing file /tmp/tlc-4966366586422094768/FiniteSets.tla (jar:file:/app/arkhe-tla-2.9.8/tla2tools.jar!/tla2sany/StandardModules/FiniteSets.tla)
+Parsing file /tmp/tlc-4966366586422094768/Sequences.tla (jar:file:/app/arkhe-tla-2.9.8/tla2tools.jar!/tla2sany/StandardModules/Sequences.tla)
+Parsing file /tmp/tlc-4966366586422094768/TLC.tla (jar:file:/app/arkhe-tla-2.9.8/tla2tools.jar!/tla2sany/StandardModules/TLC.tla)
+Parsing file /tmp/tlc-4966366586422094768/Naturals.tla (jar:file:/app/arkhe-tla-2.9.8/tla2tools.jar!/tla2sany/StandardModules/Naturals.tla)
+Parsing file /app/arkhe-tla-2.9.8/ARKHE_TraceFix.tla
+Parsing file /app/arkhe-tla-2.9.8/ARKHE_Loops.tla
+Parsing file /tmp/tlc-4966366586422094768/TLCExt.tla (jar:file:/app/arkhe-tla-2.9.8/tla2tools.jar!/tla2sany/StandardModules/TLCExt.tla)
+Semantic processing of module Naturals
+Semantic processing of module Integers
+Semantic processing of module Sequences
+Semantic processing of module FiniteSets
+Semantic processing of module TLC
+Semantic processing of module ARKHE_Types
+Semantic processing of module ARKHE_Projection
+Semantic processing of module ARKHE_State
+Semantic processing of module ARKHE_Replay
+Semantic processing of module ARKHE_Transition
+Semantic processing of module ARKHE_AASM
+Semantic processing of module ARKHE_TraceFix
+Semantic processing of module ARKHE_Loops
+Semantic processing of module ARKHE_Composition
+Semantic processing of module ARKHE_Proofs
+Semantic processing of module ARKHE_Main
+Semantic processing of module TLCExt
+Semantic processing of module _TLCTrace
+Semantic processing of module ARKHE_Main_wrapper
+Linting of module ARKHE_Types
+Linting of module ARKHE_Projection
+Linting of module ARKHE_State
+Linting of module ARKHE_Replay
+Linting of module ARKHE_Transition
+Linting of module ARKHE_AASM
+Linting of module ARKHE_TraceFix
+Linting of module ARKHE_Loops
+Linting of module ARKHE_Composition
+Linting of module ARKHE_Proofs
+Linting of module ARKHE_Main
+Linting of module TLCExt
+Linting of module _TLCTrace
+Linting of module ARKHE_Main_wrapper
+Starting... (2026-07-03 22:29:00)
+Computing initial states...
+Finished computing initial states: 1 distinct state generated at 2026-07-03 22:29:01.
+Error: Invariant Invariants is violated.
+Error: The behavior up to this point is:
+State 1: <Initial predicate>
+/\ Ledger = <<>>
+/\ activeAgent = "none"
+/\ activeLoop = "none"
+
+State 2: <AppendEvent line 30, col 12 to line 30, col 25 of module ARKHE_Transition>
+/\ Ledger = << [ id |-> "e1",
+     artifact |-> "a1",
+     payload |-> "None",
+     type |-> "DecisionMade",
+     timestamp |-> 1,
+     agent |-> "alice",
+     action |-> "None" ] >>
+/\ activeAgent = "none"
+/\ activeLoop = "none"
+
+State 3: <AppendEvent line 30, col 12 to line 30, col 25 of module ARKHE_Transition>
+/\ Ledger = << [ id |-> "e1",
+     artifact |-> "a1",
+     payload |-> "None",
+     type |-> "DecisionMade",
+     timestamp |-> 1,
+     agent |-> "alice",
+     action |-> "None" ],
+   [ id |-> "e1",
+     artifact |-> "a1",
+     payload |-> "None",
+     type |-> "DecisionMade",
+     timestamp |-> 2,
+     agent |-> "alice",
+     action |-> "None" ] >>
+/\ activeAgent = "none"
+/\ activeLoop = "none"
+
+134 states generated, 134 distinct states found, 125 states left on queue.
+The depth of the complete state graph search is 3.
+Finished in 01s at (2026-07-03 22:29:01)
+Trace exploration spec path: ./ARKHE_Main_wrapper_TTrace_1783117740.tla
