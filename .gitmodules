@@ -4,3 +4,6 @@
 [submodule "examples/gno.land/p/arkhe/fhe_artifacts/fcr_simulator_substrate_948"]
 	path = examples/gno.land/p/arkhe/fhe_artifacts/fcr_simulator_substrate_948
 	url = https://github.com/ethpandaops/fcr-simulator
+[submodule "buzz"]
+	path = buzz
+	url = https://github.com/block/buzz.git

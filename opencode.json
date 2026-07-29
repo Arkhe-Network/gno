@@ -2,6 +2,24 @@
   "tools": [
     // ... cathedral-mcp e hermes-gateway existentes ...
 
+    // NOVO: Buzz MCP (stdio)
+    {
+      "name": "buzz-dev-mcp",
+      "type": "mcp",
+      "server": {
+        "command": "cargo",
+        "args": [
+          "run",
+          "--bin", "buzz-dev-mcp",
+          "--manifest-path", "${workspaceFolder}/buzz/crates/buzz-dev-mcp/Cargo.toml"
+        ],
+        "env": {
+          "BUZZ_PRIVATE_KEY": "${env:BUZZ_PRIVATE_KEY}",
+          "BUZZ_RELAY_URL": "${env:BUZZ_RELAY_URL}"
+        }
+      },
+      "description": "Buzz MCP — AI workspace integration for teams on Nostr relay"
+    },
     // NOVO: Polar MCP (stdio, não HTTP)
     {
       "name": "cathedral-polar-mcp",
@@ -32,6 +50,8 @@
     "POLAR_WEBHOOK_SECRET": "${env:POLAR_WEBHOOK_SECRET}",
     "POLAR_OSS_ENABLED": "true",
     "POLAR_OSS_PERCENTAGE": "0.01",
-    "POLAR_OSS_CONTRIBUTORS": "[{\"github_handle\":\"dev-8000\",\"share\":0.4},{\"github_handle\":\"dev-9000\",\"share\":0.35},{\"github_handle\":\"dev-4003\",\"share\":0.25}]"
+    "POLAR_OSS_CONTRIBUTORS": "[{\"github_handle\":\"dev-8000\",\"share\":0.4},{\"github_handle\":\"dev-9000\",\"share\":0.35},{\"github_handle\":\"dev-4003\",\"share\":0.25}]",
+    "BUZZ_PRIVATE_KEY": "${env:BUZZ_PRIVATE_KEY}",
+    "BUZZ_RELAY_URL": "${env:BUZZ_RELAY_URL}"
   }
 }
