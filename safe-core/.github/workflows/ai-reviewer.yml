@@ -57,7 +57,7 @@ jobs:
 
       - name: Review with AI
         if: steps.changed.outputs.files != ''
-        uses: yetone/openai-reviewer@v1
+        uses: coderabbitai/openai-pr-reviewer@latest
         with:
           model: gpt-4o
           openai-api-key: ${{ secrets.OPENAI_API_KEY }}
