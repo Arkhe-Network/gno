@@ -1,5 +1,5 @@
-1. Add `safe-core-reactive-governance` and other requested crates.
-2. Resolve build errors with `yubihsm`.
-3. Resolve build errors with `tss-esapi` by making it an optional dependency disabled by default.
-4. Ensure all code added in this interaction compiles correctly without failing checks.
-5. Create a `pre_commit_instructions` block.
+1. Verify that `Abstract/QuotientTower.lean`, `Abstract/AgentCore.lean` and `T1/Mobius.lean` match the user's latest provided version exactly.
+2. Verify that `CathedralArkhe.lean` imports the `Abstract` modules.
+3. Update `lakefile.toml` if necessary, though it looks correct now for the directories.
+4. Run `pre_commit_instructions` as required before finalizing.
+5. Use the `submit` tool to finalize the agent's work.

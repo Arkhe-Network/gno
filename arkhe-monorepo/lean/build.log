@@ -1,0 +1,349 @@
+✔ [9/52] Built Batteries.Lean.Position (1.2s)
+✔ [13/56] Built Batteries.Lean.Meta.Inaccessible (1.2s)
+✔ [15/60] Built ImportGraph.Lean.Environment (816ms)
+✔ [20/62] Built Batteries.Logic (2.2s)
+✔ [21/62] Built Batteries.Lean.Syntax (1.1s)
+✔ [22/62] Built Mathlib.Tactic.Linter.DirectoryDependency (3.4s)
+✔ [23/68] Built ImportGraph.Tools.RedundantImports (1.8s)
+✔ [27/73] Built ImportGraph.Tools.MinImports (2.1s)
+✔ [28/73] Built ImportGraph.Tools (1.7s)
+✔ [29/108] Built Batteries.Lean.NameMapAttribute (1.6s)
+✔ [37/160] Built Mathlib.Tactic.Linter.Header (4.7s)
+✔ [38/160] Built Aesop.Script.Tactic (1.2s)
+✔ [42/160] Built Batteries.Tactic.Lint.Frontend (5.4s)
+✔ [44/160] Built Batteries.Lean.Meta.Basic (1.4s)
+✔ [47/160] Built Mathlib.Util.CodeActions.BinderPlicity (2.2s)
+✔ [48/160] Built Batteries.Util.ProofWanted (9.7s)
+✔ [52/160] Built Mathlib.Tactic.Linter.UnusedTacticExtension (2.6s)
+✔ [64/160] Built Mathlib.Lean.Environment (2.3s)
+✔ [72/161] Built Mathlib.Tactic.Linter.Whitespace (4.3s)
+✔ [76/166] Built Mathlib.Tactic.Linter.OldObtain (3.1s)
+✔ [79/167] Built Mathlib.Tactic.Linter.UnusedTactic (3.7s)
+✔ [81/169] Built Mathlib.Tactic.Linter.UnusedInstancesInType (4.1s)
+✔ [83/175] Built Mathlib.Tactic.Linter.FlexibleLinter (6.8s)
+✔ [84/175] Built Batteries.Tactic.PermuteGoals (1.9s)
+✔ [86/178] Built Batteries.Data.Array.Merge (3.9s)
+✔ [88/179] Built Batteries.Lean.Meta.SavedState (1.6s)
+✔ [89/190] Built Aesop.Check (2.4s)
+✔ [92/190] Built Aesop.Util.UnorderedArraySet (2.7s)
+✔ [96/196] Built Aesop.Forward.PremiseIndex (917ms)
+✔ [100/197] Built Aesop.Options.Public (1.9s)
+✔ [101/214] Built Mathlib.Tactic.Linter.OverlappingInstances (5.7s)
+✔ [103/214] Built Aesop.Script.Util (1.7s)
+✔ [105/214] Built Aesop.Forward.SlotIndex (1.1s)
+✔ [121/214] Built Mathlib.Lean.Elab.Term (2.0s)
+✔ [123/214] Built Aesop.Stats.Basic (3.4s)
+✔ [124/214] Built Aesop.Script.Step (2.4s)
+✔ [129/214] Built Batteries.Data.UInt (2.6s)
+✔ [130/214] Built Mathlib.Tactic.SimpRw (2.7s)
+✔ [132/214] Built Mathlib.Tactic.Push.Attr (3.5s)
+✔ [135/214] Built Mathlib.Logic.ExistsUnique (3.7s)
+✔ [136/214] Built Mathlib.Tactic.Core (4.2s)
+✔ [141/216] Built Mathlib.Lean.PrettyPrinter.Delaborator (1.5s)
+✔ [143/216] Built Mathlib.Tactic.Attr.Register (3.3s)
+✔ [144/216] Built Mathlib.Data.Nat.Notation (1.8s)
+✔ [148/216] Built Mathlib.Data.Nat.BinaryRec (2.3s)
+✔ [179/240] Built Mathlib.Data.String.Defs (1.6s)
+✔ [194/260] Built Mathlib.Tactic.Translate.Attributes (1.5s)
+✔ [203/261] Built Aesop.Util.Tactic.Unfold (1.8s)
+✔ [213/266] Built Aesop.RuleTac.Tactic (2.1s)
+✔ [214/269] Built Mathlib.Tactic.Translate.UnfoldBoundary (4.6s)
+✔ [219/269] Built Aesop.Tree.RunMetaM (1.6s)
+✔ [231/272] Built Aesop.RuleTac.Forward (4.1s)
+✔ [235/274] Built Aesop.Tree.State (2.0s)
+✔ [236/274] Built Aesop.RuleSet (8.4s)
+✔ [240/277] Built Aesop.Frontend.Extension.Init (1.8s)
+✔ [241/280] Built Mathlib.Tactic.Simps.Basic (12s)
+✔ [263/294] Built Aesop.Builder.NormSimp (1.5s)
+✔ [318/433] Built Mathlib.Logic.Relation (9.2s)
+✔ [319/433] Built Aesop.Frontend.Extension (2.2s)
+✔ [453/616] Built Mathlib.Logic.Function.Basic (8.5s)
+✖ [861/901] Running Mathlib.Topology.Instances.Real
+error: no such file or directory (error code: 4294967294)
+  file: /app/arkhe-monorepo/lean/.lake/packages/mathlib/Mathlib/Topology/Instances/Real.lean
+✖ [1375/1429] Running job computation
+error: CathedralArkhe: some modules have bad imports
+✖ [1401/1429] Running Mathlib.Topology.Quotient
+error: no such file or directory (error code: 4294967294)
+  file: /app/arkhe-monorepo/lean/.lake/packages/mathlib/Mathlib/Topology/Quotient.lean
+✖ [1402/1429] Running CathedralArkhe.T1.Mobius
+error: CathedralArkhe/T1/Mobius.lean: bad import 'Mathlib.Topology.Instances.Real'
+error: CathedralArkhe/T1/Mobius.lean: bad import 'Mathlib.Topology.Quotient'
+✖ [1403/1429] Running CathedralArkhe.Abstract.AgentCore
+error: no such file or directory (error code: 4294967294)
+  file: /app/arkhe-monorepo/lean/CathedralArkhe/Abstract/AgentCore.lean
+✖ [1404/1429] Running CathedralArkhe.Infrastructure.Orchestration
+error: CathedralArkhe/Infrastructure/Orchestration.lean: bad import 'CathedralArkhe.Abstract.AgentCore'
+✖ [1405/1429] Running CathedralArkhe.Preliminaries
+error: no such file or directory (error code: 4294967294)
+  file: /app/arkhe-monorepo/lean/CathedralArkhe/Preliminaries.lean
+✖ [1406/1429] Running CathedralArkhe.T1.NonOrientable
+error: no such file or directory (error code: 4294967294)
+  file: /app/arkhe-monorepo/lean/CathedralArkhe/T1/NonOrientable.lean
+✖ [1407/1429] Running CathedralArkhe.T1.Connected
+error: no such file or directory (error code: 4294967294)
+  file: /app/arkhe-monorepo/lean/CathedralArkhe/T1/Connected.lean
+✖ [1408/1429] Running CathedralArkhe.T1.FundamentalGroup
+error: no such file or directory (error code: 4294967294)
+  file: /app/arkhe-monorepo/lean/CathedralArkhe/T1/FundamentalGroup.lean
+✖ [1409/1429] Running CathedralArkhe.T1.DoubleCover
+error: no such file or directory (error code: 4294967294)
+  file: /app/arkhe-monorepo/lean/CathedralArkhe/T1/DoubleCover.lean
+✖ [1410/1429] Running CathedralArkhe.T2.InducedMetric
+error: no such file or directory (error code: 4294967294)
+  file: /app/arkhe-monorepo/lean/CathedralArkhe/T2/InducedMetric.lean
+✖ [1411/1429] Running CathedralArkhe.T2.LeviCivita
+error: no such file or directory (error code: 4294967294)
+  file: /app/arkhe-monorepo/lean/CathedralArkhe/T2/LeviCivita.lean
+✖ [1412/1429] Running CathedralArkhe.T2.Weitzenbock
+error: no such file or directory (error code: 4294967294)
+  file: /app/arkhe-monorepo/lean/CathedralArkhe/T2/Weitzenbock.lean
+✖ [1413/1429] Running CathedralArkhe.T2.Contortion
+error: no such file or directory (error code: 4294967294)
+  file: /app/arkhe-monorepo/lean/CathedralArkhe/T2/Contortion.lean
+✖ [1414/1429] Running CathedralArkhe.T2.AbelianLimit
+error: no such file or directory (error code: 4294967294)
+  file: /app/arkhe-monorepo/lean/CathedralArkhe/T2/AbelianLimit.lean
+✖ [1415/1429] Running CathedralArkhe.T3.WaveOperator
+error: no such file or directory (error code: 4294967294)
+  file: /app/arkhe-monorepo/lean/CathedralArkhe/T3/WaveOperator.lean
+✖ [1416/1429] Running CathedralArkhe.T3.Antiperiodic
+error: no such file or directory (error code: 4294967294)
+  file: /app/arkhe-monorepo/lean/CathedralArkhe/T3/Antiperiodic.lean
+✖ [1417/1429] Running CathedralArkhe.T3.Spectrum
+error: no such file or directory (error code: 4294967294)
+  file: /app/arkhe-monorepo/lean/CathedralArkhe/T3/Spectrum.lean
+✖ [1418/1429] Running CathedralArkhe.T3.BerryPhase
+error: no such file or directory (error code: 4294967294)
+  file: /app/arkhe-monorepo/lean/CathedralArkhe/T3/BerryPhase.lean
+✖ [1419/1429] Running CathedralArkhe.T4.WidthZeroLimit
+error: no such file or directory (error code: 4294967294)
+  file: /app/arkhe-monorepo/lean/CathedralArkhe/T4/WidthZeroLimit.lean
+✖ [1420/1429] Running CathedralArkhe.T4.TorsionZeroMaxwell
+error: no such file or directory (error code: 4294967294)
+  file: /app/arkhe-monorepo/lean/CathedralArkhe/T4/TorsionZeroMaxwell.lean
+✖ [1421/1429] Running CathedralArkhe.T4.HyperbolicCone
+error: no such file or directory (error code: 4294967294)
+  file: /app/arkhe-monorepo/lean/CathedralArkhe/T4/HyperbolicCone.lean
+✖ [1422/1429] Running CathedralArkhe.T5.Kantorovich
+error: no such file or directory (error code: 4294967294)
+  file: /app/arkhe-monorepo/lean/CathedralArkhe/T5/Kantorovich.lean
+✖ [1423/1429] Running CathedralArkhe.T5.ProductFixed
+error: no such file or directory (error code: 4294967294)
+  file: /app/arkhe-monorepo/lean/CathedralArkhe/T5/ProductFixed.lean
+✖ [1424/1429] Running CathedralArkhe.T5.FiniteSpeed
+error: no such file or directory (error code: 4294967294)
+  file: /app/arkhe-monorepo/lean/CathedralArkhe/T5/FiniteSpeed.lean
+✖ [1425/1429] Running CathedralArkhe.Applications.MathInCSSJS
+error: no such file or directory (error code: 4294967294)
+  file: /app/arkhe-monorepo/lean/CathedralArkhe/Applications/MathInCSSJS.lean
+✖ [1426/1429] Running CathedralArkhe.Applications.Typography
+error: no such file or directory (error code: 4294967294)
+  file: /app/arkhe-monorepo/lean/CathedralArkhe/Applications/Typography.lean
+✖ [1427/1429] Running CathedralArkhe.Applications.ResponsiveLayout
+error: no such file or directory (error code: 4294967294)
+  file: /app/arkhe-monorepo/lean/CathedralArkhe/Applications/ResponsiveLayout.lean
+✖ [1428/1429] Running CathedralArkhe
+error: CathedralArkhe.lean: bad import 'CathedralArkhe.Preliminaries'
+error: CathedralArkhe.lean: bad import 'CathedralArkhe.T1.Mobius'
+error: CathedralArkhe.lean: bad import 'CathedralArkhe.T1.NonOrientable'
+error: CathedralArkhe.lean: bad import 'CathedralArkhe.T1.Connected'
+error: CathedralArkhe.lean: bad import 'CathedralArkhe.T1.FundamentalGroup'
+error: CathedralArkhe.lean: bad import 'CathedralArkhe.T1.DoubleCover'
+error: CathedralArkhe.lean: bad import 'CathedralArkhe.T2.InducedMetric'
+error: CathedralArkhe.lean: bad import 'CathedralArkhe.T2.LeviCivita'
+error: CathedralArkhe.lean: bad import 'CathedralArkhe.T2.Weitzenbock'
+error: CathedralArkhe.lean: bad import 'CathedralArkhe.T2.Contortion'
+error: CathedralArkhe.lean: bad import 'CathedralArkhe.T2.AbelianLimit'
+error: CathedralArkhe.lean: bad import 'CathedralArkhe.T3.WaveOperator'
+error: CathedralArkhe.lean: bad import 'CathedralArkhe.T3.Antiperiodic'
+error: CathedralArkhe.lean: bad import 'CathedralArkhe.T3.Spectrum'
+error: CathedralArkhe.lean: bad import 'CathedralArkhe.T3.BerryPhase'
+error: CathedralArkhe.lean: bad import 'CathedralArkhe.T4.WidthZeroLimit'
+error: CathedralArkhe.lean: bad import 'CathedralArkhe.T4.TorsionZeroMaxwell'
+error: CathedralArkhe.lean: bad import 'CathedralArkhe.T4.HyperbolicCone'
+error: CathedralArkhe.lean: bad import 'CathedralArkhe.T5.Kantorovich'
+error: CathedralArkhe.lean: bad import 'CathedralArkhe.T5.ProductFixed'
+error: CathedralArkhe.lean: bad import 'CathedralArkhe.T5.FiniteSpeed'
+error: CathedralArkhe.lean: bad import 'CathedralArkhe.Applications.MathInCSSJS'
+error: CathedralArkhe.lean: bad import 'CathedralArkhe.Applications.Typography'
+error: CathedralArkhe.lean: bad import 'CathedralArkhe.Applications.ResponsiveLayout'
+error: CathedralArkhe.lean: bad import 'CathedralArkhe.Infrastructure.Orchestration'
+Some required targets logged failures:
+- Mathlib.Topology.Instances.Real
+- job computation
+- Mathlib.Topology.Quotient
+- CathedralArkhe.T1.Mobius
+- CathedralArkhe.Abstract.AgentCore
+- CathedralArkhe.Infrastructure.Orchestration
+- CathedralArkhe.Preliminaries
+- CathedralArkhe.T1.NonOrientable
+- CathedralArkhe.T1.Connected
+- CathedralArkhe.T1.FundamentalGroup
+- CathedralArkhe.T1.DoubleCover
+- CathedralArkhe.T2.InducedMetric
+- CathedralArkhe.T2.LeviCivita
+- CathedralArkhe.T2.Weitzenbock
+- CathedralArkhe.T2.Contortion
+- CathedralArkhe.T2.AbelianLimit
+- CathedralArkhe.T3.WaveOperator
+- CathedralArkhe.T3.Antiperiodic
+- CathedralArkhe.T3.Spectrum
+- CathedralArkhe.T3.BerryPhase
+- CathedralArkhe.T4.WidthZeroLimit
+- CathedralArkhe.T4.TorsionZeroMaxwell
+- CathedralArkhe.T4.HyperbolicCone
+- CathedralArkhe.T5.Kantorovich
+- CathedralArkhe.T5.ProductFixed
+- CathedralArkhe.T5.FiniteSpeed
+- CathedralArkhe.Applications.MathInCSSJS
+- CathedralArkhe.Applications.Typography
+- CathedralArkhe.Applications.ResponsiveLayout
+- CathedralArkhe
+error: build failed
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                              Downloaded: 8670 file(s) [attempted 8670/8679 = 99%, 1 KB/s], Decompressed: 5260[KDownloaded: 8673 file(s) [attempted 8673/8679 = 99%, 0 KB/s], Decompressed: 5260[KDownloaded: 8677 file(s) [attempted 8677/8679 = 99%, 1 KB/s], Decompressed: 5260[KDownloaded: 8679 file(s) [attempted 8679/8679 = 100%, 0 KB/s], Decompressed: 5260[KDownloaded: 8679 file(s) [attempted 8679/8679 = 100%, 0 KB/s], Decompressed: 5260[K
+Decompressed 8679 file(s)
+Already decompressed 8679 file(s)
+✖ [861/1019] Running Mathlib.Topology.Instances.Real
+error: no such file or directory (error code: 4294967294)
+  file: /app/arkhe-monorepo/lean/.lake/packages/mathlib/Mathlib/Topology/Instances/Real.lean
+✖ [1346/1429] Running job computation
+error: CathedralArkhe: some modules have bad imports
+✖ [1401/1429] Running Mathlib.Topology.Quotient
+error: no such file or directory (error code: 4294967294)
+  file: /app/arkhe-monorepo/lean/.lake/packages/mathlib/Mathlib/Topology/Quotient.lean
+✖ [1402/1429] Running CathedralArkhe.T1.Mobius
+error: CathedralArkhe/T1/Mobius.lean: bad import 'Mathlib.Topology.Instances.Real'
+error: CathedralArkhe/T1/Mobius.lean: bad import 'Mathlib.Topology.Quotient'
+✖ [1403/1429] Running CathedralArkhe.Abstract.AgentCore
+error: no such file or directory (error code: 4294967294)
+  file: /app/arkhe-monorepo/lean/CathedralArkhe/Abstract/AgentCore.lean
+✖ [1404/1429] Running CathedralArkhe.Infrastructure.Orchestration
+error: CathedralArkhe/Infrastructure/Orchestration.lean: bad import 'CathedralArkhe.Abstract.AgentCore'
+✖ [1405/1429] Running CathedralArkhe.Preliminaries
+error: no such file or directory (error code: 4294967294)
+  file: /app/arkhe-monorepo/lean/CathedralArkhe/Preliminaries.lean
+✖ [1406/1429] Running CathedralArkhe.T1.NonOrientable
+error: no such file or directory (error code: 4294967294)
+  file: /app/arkhe-monorepo/lean/CathedralArkhe/T1/NonOrientable.lean
+✖ [1407/1429] Running CathedralArkhe.T1.Connected
+error: no such file or directory (error code: 4294967294)
+  file: /app/arkhe-monorepo/lean/CathedralArkhe/T1/Connected.lean
+✖ [1408/1429] Running CathedralArkhe.T1.FundamentalGroup
+error: no such file or directory (error code: 4294967294)
+  file: /app/arkhe-monorepo/lean/CathedralArkhe/T1/FundamentalGroup.lean
+✖ [1409/1429] Running CathedralArkhe.T1.DoubleCover
+error: no such file or directory (error code: 4294967294)
+  file: /app/arkhe-monorepo/lean/CathedralArkhe/T1/DoubleCover.lean
+✖ [1410/1429] Running CathedralArkhe.T2.InducedMetric
+error: no such file or directory (error code: 4294967294)
+  file: /app/arkhe-monorepo/lean/CathedralArkhe/T2/InducedMetric.lean
+✖ [1411/1429] Running CathedralArkhe.T2.LeviCivita
+error: no such file or directory (error code: 4294967294)
+  file: /app/arkhe-monorepo/lean/CathedralArkhe/T2/LeviCivita.lean
+✖ [1412/1429] Running CathedralArkhe.T2.Weitzenbock
+error: no such file or directory (error code: 4294967294)
+  file: /app/arkhe-monorepo/lean/CathedralArkhe/T2/Weitzenbock.lean
+✖ [1413/1429] Running CathedralArkhe.T2.Contortion
+error: no such file or directory (error code: 4294967294)
+  file: /app/arkhe-monorepo/lean/CathedralArkhe/T2/Contortion.lean
+✖ [1414/1429] Running CathedralArkhe.T2.AbelianLimit
+error: no such file or directory (error code: 4294967294)
+  file: /app/arkhe-monorepo/lean/CathedralArkhe/T2/AbelianLimit.lean
+✖ [1415/1429] Running CathedralArkhe.T3.WaveOperator
+error: no such file or directory (error code: 4294967294)
+  file: /app/arkhe-monorepo/lean/CathedralArkhe/T3/WaveOperator.lean
+✖ [1416/1429] Running CathedralArkhe.T3.Antiperiodic
+error: no such file or directory (error code: 4294967294)
+  file: /app/arkhe-monorepo/lean/CathedralArkhe/T3/Antiperiodic.lean
+✖ [1417/1429] Running CathedralArkhe.T3.Spectrum
+error: no such file or directory (error code: 4294967294)
+  file: /app/arkhe-monorepo/lean/CathedralArkhe/T3/Spectrum.lean
+✖ [1418/1429] Running CathedralArkhe.T3.BerryPhase
+error: no such file or directory (error code: 4294967294)
+  file: /app/arkhe-monorepo/lean/CathedralArkhe/T3/BerryPhase.lean
+✖ [1419/1429] Running CathedralArkhe.T4.WidthZeroLimit
+error: no such file or directory (error code: 4294967294)
+  file: /app/arkhe-monorepo/lean/CathedralArkhe/T4/WidthZeroLimit.lean
+✖ [1420/1429] Running CathedralArkhe.T4.TorsionZeroMaxwell
+error: no such file or directory (error code: 4294967294)
+  file: /app/arkhe-monorepo/lean/CathedralArkhe/T4/TorsionZeroMaxwell.lean
+✖ [1421/1429] Running CathedralArkhe.T4.HyperbolicCone
+error: no such file or directory (error code: 4294967294)
+  file: /app/arkhe-monorepo/lean/CathedralArkhe/T4/HyperbolicCone.lean
+✖ [1422/1429] Running CathedralArkhe.T5.Kantorovich
+error: no such file or directory (error code: 4294967294)
+  file: /app/arkhe-monorepo/lean/CathedralArkhe/T5/Kantorovich.lean
+✖ [1423/1429] Running CathedralArkhe.T5.ProductFixed
+error: no such file or directory (error code: 4294967294)
+  file: /app/arkhe-monorepo/lean/CathedralArkhe/T5/ProductFixed.lean
+✖ [1424/1429] Running CathedralArkhe.T5.FiniteSpeed
+error: no such file or directory (error code: 4294967294)
+  file: /app/arkhe-monorepo/lean/CathedralArkhe/T5/FiniteSpeed.lean
+✖ [1425/1429] Running CathedralArkhe.Applications.MathInCSSJS
+error: no such file or directory (error code: 4294967294)
+  file: /app/arkhe-monorepo/lean/CathedralArkhe/Applications/MathInCSSJS.lean
+✖ [1426/1429] Running CathedralArkhe.Applications.Typography
+error: no such file or directory (error code: 4294967294)
+  file: /app/arkhe-monorepo/lean/CathedralArkhe/Applications/Typography.lean
+✖ [1427/1429] Running CathedralArkhe.Applications.ResponsiveLayout
+error: no such file or directory (error code: 4294967294)
+  file: /app/arkhe-monorepo/lean/CathedralArkhe/Applications/ResponsiveLayout.lean
+✖ [1428/1429] Running CathedralArkhe
+error: CathedralArkhe.lean: bad import 'CathedralArkhe.Preliminaries'
+error: CathedralArkhe.lean: bad import 'CathedralArkhe.T1.Mobius'
+error: CathedralArkhe.lean: bad import 'CathedralArkhe.T1.NonOrientable'
+error: CathedralArkhe.lean: bad import 'CathedralArkhe.T1.Connected'
+error: CathedralArkhe.lean: bad import 'CathedralArkhe.T1.FundamentalGroup'
+error: CathedralArkhe.lean: bad import 'CathedralArkhe.T1.DoubleCover'
+error: CathedralArkhe.lean: bad import 'CathedralArkhe.T2.InducedMetric'
+error: CathedralArkhe.lean: bad import 'CathedralArkhe.T2.LeviCivita'
+error: CathedralArkhe.lean: bad import 'CathedralArkhe.T2.Weitzenbock'
+error: CathedralArkhe.lean: bad import 'CathedralArkhe.T2.Contortion'
+error: CathedralArkhe.lean: bad import 'CathedralArkhe.T2.AbelianLimit'
+error: CathedralArkhe.lean: bad import 'CathedralArkhe.T3.WaveOperator'
+error: CathedralArkhe.lean: bad import 'CathedralArkhe.T3.Antiperiodic'
+error: CathedralArkhe.lean: bad import 'CathedralArkhe.T3.Spectrum'
+error: CathedralArkhe.lean: bad import 'CathedralArkhe.T3.BerryPhase'
+error: CathedralArkhe.lean: bad import 'CathedralArkhe.T4.WidthZeroLimit'
+error: CathedralArkhe.lean: bad import 'CathedralArkhe.T4.TorsionZeroMaxwell'
+error: CathedralArkhe.lean: bad import 'CathedralArkhe.T4.HyperbolicCone'
+error: CathedralArkhe.lean: bad import 'CathedralArkhe.T5.Kantorovich'
+error: CathedralArkhe.lean: bad import 'CathedralArkhe.T5.ProductFixed'
+error: CathedralArkhe.lean: bad import 'CathedralArkhe.T5.FiniteSpeed'
+error: CathedralArkhe.lean: bad import 'CathedralArkhe.Applications.MathInCSSJS'
+error: CathedralArkhe.lean: bad import 'CathedralArkhe.Applications.Typography'
+error: CathedralArkhe.lean: bad import 'CathedralArkhe.Applications.ResponsiveLayout'
+error: CathedralArkhe.lean: bad import 'CathedralArkhe.Infrastructure.Orchestration'
+Some required targets logged failures:
+- Mathlib.Topology.Instances.Real
+- job computation
+- Mathlib.Topology.Quotient
+- CathedralArkhe.T1.Mobius
+- CathedralArkhe.Abstract.AgentCore
+- CathedralArkhe.Infrastructure.Orchestration
+- CathedralArkhe.Preliminaries
+- CathedralArkhe.T1.NonOrientable
+- CathedralArkhe.T1.Connected
+- CathedralArkhe.T1.FundamentalGroup
+- CathedralArkhe.T1.DoubleCover
+- CathedralArkhe.T2.InducedMetric
+- CathedralArkhe.T2.LeviCivita
+- CathedralArkhe.T2.Weitzenbock
+- CathedralArkhe.T2.Contortion
+- CathedralArkhe.T2.AbelianLimit
+- CathedralArkhe.T3.WaveOperator
+- CathedralArkhe.T3.Antiperiodic
+- CathedralArkhe.T3.Spectrum
+- CathedralArkhe.T3.BerryPhase
+- CathedralArkhe.T4.WidthZeroLimit
+- CathedralArkhe.T4.TorsionZeroMaxwell
+- CathedralArkhe.T4.HyperbolicCone
+- CathedralArkhe.T5.Kantorovich
+- CathedralArkhe.T5.ProductFixed
+- CathedralArkhe.T5.FiniteSpeed
+- CathedralArkhe.Applications.MathInCSSJS
+- CathedralArkhe.Applications.Typography
+- CathedralArkhe.Applications.ResponsiveLayout
+- CathedralArkhe
+error: build failed

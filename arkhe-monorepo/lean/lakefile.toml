@@ -1,0 +1,17 @@
+name = "cathedralArkhe"
+version = "0.1.0"
+defaultTargets = ["CathedralArkhe"]
+
+[leanOptions]
+pp.unicode.fun = true # pretty-prints `fun a ↦ b`
+
+[[require]]
+name = "mathlib"
+scope = "leanprover-community"
+rev = "master"
+
+[[lean_lib]]
+name = "CathedralArkhe"
+
+[[lean_lib]]
+name = "CathedralArkhe.Abstract"
