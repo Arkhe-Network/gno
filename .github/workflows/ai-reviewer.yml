@@ -22,7 +22,7 @@ jobs:
           fetch-depth: 0
 
       - name: Review with AI
-        uses: yetone/openai-reviewer@v1
+        uses: yetone/chatgpt-reviewer@main
         with:
           model: gpt-4o
           openai-api-key: ${{ secrets.OPENAI_API_KEY }}
