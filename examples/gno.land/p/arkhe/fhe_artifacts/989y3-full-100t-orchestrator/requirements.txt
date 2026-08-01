@@ -1,3 +1,0 @@
-# ARKHE Cathedral — Substrato 989.y.3 FULL-100T-ORCHESTRATOR
-pytest>=8.0.0
-pytest-asyncio>=0.23.0

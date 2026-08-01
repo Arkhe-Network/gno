@@ -67,20 +67,22 @@ jobs:
       - name: Generate Report
         id: report
         run: |
-          echo "## 📊 Nightly Build Report" >> report.md
-          echo "" >> report.md
-          echo "**Date:** $(date -u)" >> report.md
-          echo "**Commit:** \`${{ github.sha }}\`" >> report.md
-          echo "" >> report.md
-          echo "### Test Results" >> report.md
-          echo "\`\`\`" >> report.md
-          cat tests-output.txt | head -50 >> report.md
-          echo "\`\`\`" >> report.md
-          echo "" >> report.md
-          echo "### Benchmark Results" >> report.md
-          echo "\`\`\`" >> report.md
-          cat bench-output.txt | head -50 >> report.md
-          echo "\`\`\`" >> report.md
+          {
+            echo "## 📊 Nightly Build Report"
+            echo ""
+            echo "**Date:** $(date -u)"
+            echo "**Commit:** \`${{ github.sha }}\`"
+            echo ""
+            echo "### Test Results"
+            echo "\`\`\`"
+            head -50 tests-output.txt
+            echo "\`\`\`"
+            echo ""
+            echo "### Benchmark Results"
+            echo "\`\`\`"
+            head -50 bench-output.txt
+            echo "\`\`\`"
+          } > report.md
 
       - name: Upload Report
         uses: actions/upload-artifact@v4
