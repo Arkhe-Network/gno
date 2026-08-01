@@ -27,7 +27,7 @@ jobs:
       actions: write # for GHA cache (docker buildx cache-to/from=type=gha)
       packages: write # to push images to ghcr.io
     steps:
-      - uses: actions/checkout@93cb6efe18208431cddfb8368fd83d5badbf9bfd # v5
+      - uses: actions/checkout@v4
         with:
           ref: ${{ inputs.tag || github.ref }}
           persist-credentials: false

@@ -39,8 +39,10 @@ jobs:
 
       - name: Check for Breaking Changes
         id: breaking
+        env:
+          PR_BODY: ${{ github.event.pull_request.body }}
         run: |
-          if grep -q "BREAKING CHANGE:" <<< "${{ github.event.pull_request.body }}"; then
+          if grep -q "BREAKING CHANGE:" <<< "$PR_BODY"; then
             echo "breaking=true" >> $GITHUB_OUTPUT
           else
             echo "breaking=false" >> $GITHUB_OUTPUT
@@ -54,8 +56,10 @@ jobs:
 
       - name: Check for Security Fixes
         id: security
+        env:
+          PR_BODY: ${{ github.event.pull_request.body }}
         run: |
-          if grep -qi "security\|cve\|vulnerability" <<< "${{ github.event.pull_request.body }}"; then
+          if grep -qi "security\|cve\|vulnerability" <<< "$PR_BODY"; then
             echo "security=true" >> $GITHUB_OUTPUT
           else
             echo "security=false" >> $GITHUB_OUTPUT

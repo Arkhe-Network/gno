@@ -58,7 +58,7 @@ jobs:
               json.dump(metrics, f, indent=2)
 
           # Gerar badge
-          print('::set-output name=metrics::' + json.dumps(metrics))
+          print('echo "metrics=' + json.dumps(metrics) + '" >> $GITHUB_OUTPUT')
           PY_EOF
 
       - name: Upload Benchmark Results
@@ -103,7 +103,7 @@ jobs:
 
       - name: Upload to Benchmarks GitHub Page
         if: github.ref == 'refs/heads/main'
-        uses: peaceiris/actions-gh-pages@v3
+        uses: peaceiris/actions-gh-pages@v4
         with:
           github_token: ${{ secrets.GITHUB_TOKEN }}
           publish_dir: ./bench-results
