@@ -13,3 +13,6 @@
 [submodule "arkhe-monorepo/lean/.lake/packages/Cli"]
 	path = arkhe-monorepo/lean/.lake/packages/Cli
 	url = https://github.com/mhuisi/lean4-cli.git
+[submodule "arkhe-monorepo/lean/.lake/packages/Qq"]
+	path = arkhe-monorepo/lean/.lake/packages/Qq
+	url = https://github.com/leanprover-community/quote4.git
