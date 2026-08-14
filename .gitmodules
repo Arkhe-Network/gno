@@ -7,3 +7,6 @@
 [submodule "buzz"]
 	path = buzz
 	url = https://github.com/block/buzz.git
+[submodule "arkhe-monorepo/lean/.lake/packages/Cli"]
+	path = arkhe-monorepo/lean/.lake/packages/Cli
+	url = https://github.com/mhuisi/lean4-cli.git

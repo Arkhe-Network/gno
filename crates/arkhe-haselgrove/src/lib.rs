@@ -574,8 +574,6 @@ mod tests {
             }
         }
 
-        // A trajetória deve ser aproximadamente retilínea
-        // (θ deve variar linearmente com r)
         let first = traj.first().unwrap();
         let last = traj.last().unwrap();
         let dr = last.r - first.r;
