@@ -1,0 +1,10 @@
+[package]
+name = "arkhe-haselgrove"
+version = "0.1.0"
+edition = "2021"
+
+[dependencies]
+num-complex = "0.4"
+
+[lib]
+bench = false
