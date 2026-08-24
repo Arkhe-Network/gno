@@ -15,7 +15,8 @@ members = [
     "crates/cathedral-taproot-bridge",
     "crates/cathedral-agents",
     "crates/safe-core-fhe",
-    "crates/arkhe-haselgrove"
+    "crates/arkhe-haselgrove",
+    "crates/dream-evidence-core"
 ]
 resolver = "2"
 

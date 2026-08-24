@@ -1,0 +1,4 @@
+[workspace]
+members = ["."]
+[kani.flags]
+unwind = 1
