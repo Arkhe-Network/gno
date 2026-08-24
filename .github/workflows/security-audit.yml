@@ -1,0 +1,96 @@
+name: Security Audit & SBOM
+
+on:
+  push:
+    branches: [main, develop]
+  pull_request:
+    branches: [main]
+  schedule:
+    - cron: '0 6 * * *'   # Diário às 06:00 UTC
+
+env:
+  CARGO_TERM_COLOR: always
+
+jobs:
+  audit:
+    name: cargo-deny + cargo-cyclonedx
+    runs-on: ubuntu-latest
+    permissions:
+      contents: read
+      security-events: write
+      actions: read
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Install Rust toolchain
+        uses: dtolnay/rust-toolchain@stable
+
+      - name: Cache cargo tools
+        uses: actions/cache@v4
+        with:
+          path: |
+            ~/.cargo/bin/cargo-deny
+            ~/.cargo/bin/cargo-cyclonedx
+            ~/.cargo/registry
+            ~/.cargo/git
+            target
+          key: ${{ runner.os }}-cargo-tools-${{ hashFiles('**/Cargo.lock') }}
+          restore-keys: |
+            ${{ runner.os }}-cargo-tools-
+
+      - name: Install cargo-deny (via binstall if available)
+        run: |
+          if ! command -v cargo-deny &> /dev/null; then
+            if command -v cargo-binstall &> /dev/null; then
+              cargo binstall cargo-deny --locked --no-confirm
+            else
+              cargo install cargo-deny --locked
+            fi
+          fi
+          cargo deny --version
+
+      - name: Install cargo-cyclonedx (via binstall if available)
+        run: |
+          if ! command -v cargo-cyclonedx &> /dev/null; then
+            if command -v cargo-binstall &> /dev/null; then
+              cargo binstall cargo-cyclonedx --locked --no-confirm
+            else
+              cargo install cargo-cyclonedx --locked
+            fi
+          fi
+          cargo cyclonedx --version
+
+      - name: Run cargo-deny (advisories + licenses + bans)
+        run: cargo deny check advisories licenses bans
+        continue-on-error: false
+
+      - name: Generate SBOM (CycloneDX JSON)
+        run: cargo cyclonedx --format json --output sbom.json
+
+      - name: Validate SBOM JSON
+        run: |
+          python3 -c "import json; data=json.load(open('sbom.json')); print(f'SBOM valido: {len(data.get(\"components\", []))} componentes')"
+
+      - name: Upload SBOM artifact
+        uses: actions/upload-artifact@v4
+        with:
+          name: sbom-cyclonedx
+          path: sbom.json
+          retention-days: 90
+
+      - name: Upload deny report
+        if: failure()
+        uses: actions/upload-artifact@v4
+        with:
+          name: cargo-deny-report
+          path: |
+            deny.toml
+          retention-days: 30
+
+      - name: Summary
+        if: always()
+        run: |
+          echo "## Security Audit Results" >> $GITHUB_STEP_SUMMARY
+          echo "- cargo-deny: ${{ job.status == 'success' && '✅ PASS' || '❌ FAIL' }}" >> $GITHUB_STEP_SUMMARY
+          echo "- SBOM: ✅ GERADO" >> $GITHUB_STEP_SUMMARY

@@ -1,0 +1,65 @@
+name: Crate Scoring
+
+on:
+  push:
+    branches: [main, develop]
+  pull_request:
+    branches: [main]
+
+env:
+  CARGO_TERM_COLOR: always
+
+jobs:
+  score:
+    name: Score por Crate
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Install Rust toolchain
+        uses: dtolnay/rust-toolchain@stable
+
+      - name: Cache cargo
+        uses: actions/cache@v4
+        with:
+          path: |
+            ~/.cargo/registry
+            ~/.cargo/git
+            target
+          key: ${{ runner.os }}-cargo-${{ hashFiles('**/Cargo.lock') }}
+          restore-keys: |
+            ${{ runner.os }}-cargo-
+
+      - name: Setup Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+
+      - name: Run crate scoring
+        id: scoring
+        run: |
+          python scripts/score-crates.py --json --badge
+          echo "global_score=$(jq -r '.global_score' score-report.json)" >> $GITHUB_OUTPUT
+
+      - name: Upload score report
+        uses: actions/upload-artifact@v4
+        with:
+          name: score-report
+          path: |
+            score-report.json
+            score-badge.svg
+          retention-days: 90
+
+      - name: Summary
+        if: always()
+        run: |
+          echo "## ARKHE Crate Scoring" >> $GITHUB_STEP_SUMMARY
+          echo "Score global: **${{ steps.scoring.outputs.global_score }}**/100" >> $GITHUB_STEP_SUMMARY
+          echo "" >> $GITHUB_STEP_SUMMARY
+          echo "<details><summary>Detalhes por crate</summary>" >> $GITHUB_STEP_SUMMARY
+          echo "" >> $GITHUB_STEP_SUMMARY
+          echo '```json' >> $GITHUB_STEP_SUMMARY
+          cat score-report.json >> $GITHUB_STEP_SUMMARY
+          echo '```' >> $GITHUB_STEP_SUMMARY
+          echo "</details>" >> $GITHUB_STEP_SUMMARY
