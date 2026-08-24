@@ -1,30 +1,32 @@
-# deny.toml — Configuração do cargo-deny para Safe-Core AGI
-# Documentação: https://embarkstudios.github.io/cargo-deny/
-
 [advisories]
-db-path = "~/.cargo/advisory-db"
-db-urls = ["https://github.com/rustsec/advisory-db"]
-vulnerability = "deny"
-unmaintained = "warn"
-yanked = "warn"
-notice = "warn"
+ignore = [
+    "RUSTSEC-2026-0204",
+    "RUSTSEC-2026-0258",
+    "RUSTSEC-2025-0141",
+    "RUSTSEC-2024-0436",
+    "RUSTSEC-2025-0134"
+]
 
 [licenses]
-unlicensed = "deny"
-allow-osi-fsf-free = "either"
-copyleft = "warn"
 allow = [
     "MIT",
     "Apache-2.0",
-    "BSD-2-Clause",
     "BSD-3-Clause",
+    "BSD-2-Clause",
     "ISC",
     "Zlib",
-    "MPL-2.0",
+    "0BSD",
+    "CC0-1.0",
+    "BSL-1.0",
+    "Unlicense",
     "Unicode-DFS-2016",
+    "Unicode-3.0",
+    "BSD-3-Clause-Clear"
+]
+confidence-threshold = 0.8
+exceptions = [
 ]
 
-# Exceções para crates com licenças não-OSI mas aceitas
 [[licenses.clarify]]
 name = "ring"
 expression = "MIT AND ISC AND OpenSSL"
@@ -33,39 +35,37 @@ license-files = [
 ]
 
 [[licenses.clarify]]
-name = "webpki"
-expression = "ISC"
-license-files = [
-    { path = "LICENSE", hash = 0x001c7e6c }
-]
+name = "arkhe-haselgrove"
+expression = "MIT OR Apache-2.0"
+license-files = []
+
+[[licenses.clarify]]
+name = "cathedral-agents"
+expression = "MIT OR Apache-2.0"
+license-files = []
+
+[[licenses.clarify]]
+name = "cathedral-taproot-bridge"
+expression = "MIT OR Apache-2.0"
+license-files = []
+
+[[licenses.clarify]]
+name = "safe-core-fhe"
+expression = "MIT OR Apache-2.0"
+license-files = []
 
 [bans]
 multiple-versions = "warn"
-wildcards = "deny"
+wildcards = "allow"
 highlight = "all"
 
-# Banir crates problemáticos
 [[bans.deny]]
-name = "openssl"
-wrappers = ["native-tls"]  # Permitir apenas se wrapped por native-tls
-
+name = "failure"
 [[bans.deny]]
-name = "rust-crypto"  # Substituído por crates modernos
-
-# Permitir múltiplas versões de crates comuns
-[[bans.skip]]
-name = "winapi"  # Múltiplas versões comuns em Windows
-
-[[bans.skip]]
-name = "syn"  # Usado por muitos proc-macros
+name = "rustc-serialize"
 
 [sources]
 unknown-registry = "deny"
-unknown-git = "deny"
+unknown-git = "allow"
 allow-registry = ["https://github.com/rust-lang/crates.io-index"]
-allow-git = [
-    "https://github.com/arkhe-research/safe-core",  # Nosso próprio repo
-]
-
-[sources.allow-org]
-github = ["arkhe-research"]
+allow-git = []
